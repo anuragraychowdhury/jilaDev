@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #mainContent {
+            display: none;
+        }
+    </style>
+    <title>Jila Internal Tool</title>
+</head>
+<body>
+    <div id="passwordPrompt">
+        <h2>Enter the password to access the Jila Internal Tool</h2>
+        <input type="password" id="passwordInput" placeholder="Enter password" autofocus>
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <div id="mainContent">
+
+        <header>
+            <h1>Jila Internal Tool</h1>
+        </header>
+        <main>
+            <section id="videosDashboard">
+                <h2>Videos Dashboard</h2>
+                <div id="videosGrid" class="grid-container"></div>
+                <div id="video-add-panel">
+                    <h2>Add New Video</h2>
+                    <form id="add-video-form">
+                        <label for="title">Title:</label>
+                        <input type="text" id="videoTitleInput" name="title" required><br>
+            
+                        <label for="show">Show:</label>
+                        <input type="text" id="videoShowInput" name="show" required><br>
+            
+                        <label for="topicName">Topic:</label>
+                        <input type="text" id="videoTopicNameInput" name="topicName"><br>
+            
+                        <label for="length">Length:</label>
+                        <input type="text" id="videoLengthInput" name="length" required><br>
+            
+                        <label for="youtubeLink">YouTube Link:</label>
+                        <input type="text" id="videoYoutubeLinkInput" name="youtubeLink" required><br>
+            
+                    </form>
+                    <button onclick="addVideo()">Add Video</button>
+                </div>
+            </section>
+            <section id="topicsDashboard">
+                <h2>Topics Dashboard</h2>
+                <div id="topicsGrid" class="grid-container"></div>
+                <div id="addTopicForm">
+                    <h3>Add Topic</h3>
+                    <input type="text" id="topicNameInput" placeholder="Topic Name">
+                    <input type="file" id="topicImageInput" accept="image/*">
+                    <button onclick="addTopic()">Add Topic</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Jila Internal Tool</p>
+        </footer>
+        <script src="script.js"></script>
+    </div>
+
+</body>
+</html>
+
