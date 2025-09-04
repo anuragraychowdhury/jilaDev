@@ -1,6 +1,6 @@
 async function fetchVideos() {
     try {
-        const response = await fetch('http://api.jila-app.org/fetchVideos/all');
+        const response = await fetch('http://localhost:5001/fetchVideos/all');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -14,7 +14,7 @@ async function fetchVideos() {
 
 async function fetchAllTopics() {
     try {
-        const response = await fetch('http://api.jila-app.org/fetch/topics');
+        const response = await fetch('http://localhost:5001/fetch/topics');
         if (!response.ok) {
             throw new Error("network response was not ok");
         }
@@ -120,7 +120,7 @@ async function addVideo() {
         youtubeLink: youtubeLink,
     })
 
-    fetch('http://api.jila-app.org/addVideo', {
+    fetch('http://localhost:5001/addVideo', {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -157,7 +157,7 @@ async function addTopic() {
     reader.onload = function () {
         const base64Image = reader.result;
         const body = JSON.stringify({ topicName: topicName, icon: base64Image });
-        fetch('http://api.jila-app.org/addTopic', {
+        fetch('http://localhost:5001/addTopic', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -181,7 +181,7 @@ async function addTopic() {
     // location.reload();
 }
 function deleteTopic(topicName) {
-    fetch(`http://api.jila-app.org/deleteTopic/${encodeURIComponent(topicName)}`, {
+    fetch(`http://localhost:5001/deleteTopic/${encodeURIComponent(topicName)}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
@@ -201,7 +201,7 @@ function deleteTopic(topicName) {
 }
 
 function deleteVideo(videoName) {
-    fetch(`http://api.jila-app.org/deleteVideo/${encodeURIComponent(videoName)}`, {
+    fetch(`http://localhost:5001/deleteVideo/${encodeURIComponent(videoName)}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
