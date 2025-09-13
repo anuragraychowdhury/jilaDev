@@ -1,4 +1,10 @@
-flask
-flask_cors
-pymongo
-python-dotenv
+# Jila App - Backend Dependencies
+# ================================
+# 
+# Python packages required for the Flask backend server
+# Install with: pip install -r requirements.txt
+
+flask          # Web framework for Python
+flask_cors     # Cross-Origin Resource Sharing support
+pymongo        # MongoDB driver for Python
+python-dotenv  # Environment variable management

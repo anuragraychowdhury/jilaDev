@@ -1,3 +1,23 @@
+/**
+ * VideoPage Component - Video List for Topic
+ * ===========================================
+ * 
+ * Displays all videos for a specific topic in a clean, organized list.
+ * Provides direct YouTube integration for video playback.
+ * 
+ * Features:
+ * - Fetches videos for specific topic from Flask backend
+ * - Clean list layout with video metadata
+ * - YouTube integration with play buttons
+ * - Back navigation to HomePage
+ * - Loading states and error handling
+ * - Responsive design for mobile/desktop
+ * 
+ * API Endpoint: GET /fetchTopic/<topicName>
+ * 
+ * Author: Anurag Raychowdhury
+ */
+
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './VideoPage.css';

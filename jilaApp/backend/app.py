@@ -1,3 +1,20 @@
+"""
+Jila App - Flask Backend API Server
+====================================
+
+Main Flask application providing REST API endpoints for video and topic management.
+Handles CRUD operations for MongoDB database with CORS support for React frontend.
+
+Features:
+- Video management (add, fetch, delete)
+- Topic management (add, fetch, delete, update)
+- MongoDB Atlas integration
+- CORS enabled for cross-origin requests
+- Environment-based configuration
+
+Author: Anurag Raychowdhury
+"""
+
 from flask import Flask, jsonify, request
 import os
 from pymongo import MongoClient

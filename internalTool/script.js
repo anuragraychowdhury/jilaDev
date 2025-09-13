@@ -1,3 +1,28 @@
+/**
+ * Jila App - Internal Tool JavaScript
+ * ===================================
+ * 
+ * Frontend JavaScript for the admin dashboard providing video and topic management.
+ * Handles API communication with Flask backend and dynamic content rendering.
+ * 
+ * Features:
+ * - Password authentication
+ * - CRUD operations for videos and topics
+ * - Dynamic content rendering with grids
+ * - Error handling and user feedback
+ * - File upload for topic icons (base64 encoding)
+ * 
+ * API Endpoints Used:
+ * - GET /fetchVideos/all
+ * - GET /fetch/topics
+ * - PUT /addVideo
+ * - POST /addTopic
+ * - DELETE /deleteVideo/<name>
+ * - DELETE /deleteTopic/<name>
+ * 
+ * Author: Anurag Raychowdhury
+ */
+
 async function fetchVideos() {
     try {
         const response = await fetch('http://localhost:5001/fetchVideos/all');

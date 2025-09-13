@@ -1,3 +1,22 @@
+/**
+ * HomePage Component - Topic Browser
+ * ==================================
+ * 
+ * Main landing page displaying all available topics in a responsive grid layout.
+ * Fetches topics from the Flask backend and provides navigation to individual topic pages.
+ * 
+ * Features:
+ * - Fetches topics with icons from MongoDB via Flask API
+ * - Responsive grid layout with hover effects
+ * - Loading states and error handling
+ * - Navigation to VideoPage for each topic
+ * - Most Used and All Topics sections
+ * 
+ * API Endpoint: GET /fetch/topics
+ * 
+ * Author: Anurag Raychowdhury
+ */
+
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
